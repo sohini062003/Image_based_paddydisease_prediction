@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: paddy-disease-prediction
+    env: python
+    region: oregon # or adjust based on your region
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn crop.wsgi:application
+    autoDeploy: true
+    envVars:
+      - key: django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: DATABASE_URL
+        sync: false # Add if using a database (e.g., PostgreSQL)
+      - key: DEBUG
+        value: "False"
