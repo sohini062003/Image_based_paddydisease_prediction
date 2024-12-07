@@ -7,11 +7,11 @@ services:
     startCommand: gunicorn crop.wsgi:application
     autoDeploy: true
     envVars:
-      - key: django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg
+      - key: "django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg"
         sync: false
       - key: ALLOWED_HOSTS
-        value: "*"
+        value: " ['127.0.0.1', 'localhost', 'paddy_disease_predictor.onrender.com'] "
       - key: DATABASE_URL
-        sync: false # Add if using a database (e.g., PostgreSQL)
+        sync: false 
       - key: DEBUG
         value: "False"
