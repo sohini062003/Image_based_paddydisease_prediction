@@ -18,7 +18,7 @@ services:
       - key: "django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg"
         sync: false
       - key: ALLOWED_HOSTS
-        value: "paddy-disease-predictor1.onrender.com"
+        value: "paddy_disease_predictor1.onrender.com"
       - key: DEBUG
         value: "False"
       - key: DATABASE_URL
