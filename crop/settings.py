@@ -24,8 +24,7 @@ SECRET_KEY = 'django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'image-based-paddydisease-prediction-9.onrender.com']   
 
 
 # Application definition
