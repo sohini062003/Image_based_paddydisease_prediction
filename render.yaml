@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: paddy-disease-prediction
+    env: python
+    region: oregon  # Adjust based on your region
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn crop.wsgi:application
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY  # Use a more readable key name
+        value: "django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg"  # Secret key should be kept private
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: "['127.0.0.1', 'localhost', 'paddy_disease_predictor.onrender.com'] "
+      - key: DATABASE_URL
+        sync: false  # Add if using a database (e.g., PostgreSQL)
+      - key: DEBUG
+        value: "False"
