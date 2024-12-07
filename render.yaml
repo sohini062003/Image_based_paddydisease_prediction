@@ -10,12 +10,12 @@ services:
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
       python manage.py migrate
-    startCommand: gunicorn your_project_name.wsgi:application
+    startCommand: gunicorn crop.wsgi:application
     autoDeploy: true
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: your_project_name.settings
-      - key: SECRET_KEY
+        value: crop.settings
+      - key: "django-insecure-35@71%w5t$0htprbxks_657*a(z3%ugw6g3@zcf3227s8^_=mg"
         sync: false
       - key: ALLOWED_HOSTS
         value: "paddy-disease-predictor1.onrender.com"
